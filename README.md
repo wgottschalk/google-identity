@@ -7,3 +7,5 @@ Make sure dependencies are installed by running
 then start the app by running
 
 `yarn dev`
+
+the implementation is available [here](./src/main.tsx)
