@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 
 type TokenResponse = google.accounts.oauth2.TokenResponse
+const CLIENT_ID = '<INSERT OAUTH_CLIENT_ID HERE>';
 
 function fetchAccessToken(email?: string): Promise<TokenResponse> {
   return new Promise((resolve) => {
     const client = google.accounts.oauth2.initTokenClient({
-      client_id: "456020475075-osesicmio8bh9id9mmhakm4o9ip24hem.apps.googleusercontent.com",
+      client_id: CLIENT_ID,
       scope: 'email openid profile',
       callback: (response) => {
         resolve(response)
